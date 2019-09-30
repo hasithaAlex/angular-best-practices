@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router'
 
-import { DataRepositoryService } from '../services/data-repository'
+import { DataRepositoryService } from '../services/data-repository.service'
 
 @Component({
   styles: [`
@@ -92,7 +92,7 @@ export class SignInComponent {
 }
 
 @Component({
-  styleUrls: ['../styles/register.css'],
+  styleUrls: ['../styles/register.component.css'],
   templateUrl: '../templates/register.html'
 })
 
@@ -102,7 +102,7 @@ export class RegisterComponent {
   lastName: FormControl;
   email: FormControl;
   password: FormControl;
-  saving:boolean=false;
+  saving: boolean = false;
 
   constructor(private router:Router, private dataRepository:DataRepositoryService) { }
 

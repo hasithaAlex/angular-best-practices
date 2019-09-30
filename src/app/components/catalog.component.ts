@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 
-import { DataRepositoryService } from "../services/data-repository"
+import { DataRepositoryService } from '../services/data-repository.service'
 
 @Component({
-  styleUrls: ['../styles/catalog.css'],
-  templateUrl: '../templates/catalog.html'
+  styleUrls: ['../styles/catalog.component.css'],
+  templateUrl: '../templates/catalog.component.html'
 })
-export class CoursesComponent {
-  classes:any[];
-  visibleClasses:any[];
+export class CatalogComponent {
+  classes: any[];
+  visibleClasses: any[];
 
-  constructor(private dataRepository:DataRepositoryService) {}
+  constructor(private dataRepository: DataRepositoryService) {}
 
   ngOnInit() {
     this.dataRepository.getCatalog()
