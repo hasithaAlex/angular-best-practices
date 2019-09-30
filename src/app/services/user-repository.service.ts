@@ -40,7 +40,6 @@ export class UserRepositoryService {
   }
 
   signIn(credentials): Observable<any> {
-    debugger
     //Never, ever check credentials in client-side code.
     //This code is only here to supply a fake endpoint for signing in.
     if (credentials.email !== 'me@whitebeards.edu' || credentials.password !== 'super-secret')
@@ -58,7 +57,7 @@ export class UserRepositoryService {
   }
 }
 
-const USERS = [{
+const users = [{
   userId: 'e61aebed-dbc5-437a-b514-02b8380d8efc',
   firstName: 'Jim',
   lastName: 'Cooper',

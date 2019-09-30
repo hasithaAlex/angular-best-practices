@@ -15,7 +15,6 @@ export class CatalogComponent {
     private userRepositoryService: UserRepositoryService) {}
 
   ngOnInit() {
-    debugger
     this.catalogRepository.getCatalog()
       .subscribe(classes => { this.classes = classes; this.applyFilter('')});
   }
