@@ -92,8 +92,8 @@ export class SignInComponent {
 }
 
 @Component({
-  styleUrls: ['../styles/register.component.css'],
-  templateUrl: '../templates/register.html'
+  styleUrls: ['./register.component.css'],
+  templateUrl: './register.html'
 })
 
 export class RegisterComponent {
