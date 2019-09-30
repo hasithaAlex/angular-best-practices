@@ -22,7 +22,9 @@ export class UserRepositoryService {
     if (this.currentUser.classes.includes[classId])
       return Observable.throw('Already enrolled');
 
-    this.currentUser.classes.push(classId);
+    // this.currentUser.classes.push(classId);
+    this.currentUser = Object.assign({}, this.currentUser,
+      {classes: this.currentUser.classes.concat([classId])});
 
     return Observable.empty().delay(1000);
   }
@@ -34,7 +36,9 @@ export class UserRepositoryService {
     if (!this.currentUser.classes.includes(classId))
       return Observable.throw('Not enrolled');
 
-    this.currentUser.classes = this.currentUser.classes.filter(c => c.classId !== classId);
+    // this.currentUser.classes = this.currentUser.classes.filter(c => c.classId !== classId);
+    this.currentUser = Object.assign({}, this.currentUser,
+      {classes: this.currentUser.classes.filter(c => c.classId !== classId)});
 
     return Observable.empty().delay(1000);
   }
