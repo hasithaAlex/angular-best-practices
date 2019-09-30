@@ -9,8 +9,10 @@ export class UserRepositoryService {
   constructor() {}
 
   saveUser(user): Observable<any> {
-    user.classes = user.classes || [];
-    this.currentUser = user;
+
+    // user.classes = user.classes || [];
+    // this.currentUser = user;
+    this.currentUser = Object.assign({}, user, {classes: user.classes || []})
 
     return Observable.empty().delay(1000);
   }
