@@ -7,12 +7,11 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms'
 
 import { appRoutes } from './routes'
 import { AppComponent } from './app.component';
-import { CatalogComponent } from './catalog/catalog.component';
 import { RegisterComponent } from './user/register.component';
 import { SignInComponent } from './user/sign-in.component';
-import { CatalogRepositoryService } from './catalog/catalog-repository.service'
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { CatalogModule } from './catalog/catalog.module';
 @NgModule({
   imports:      [
     BrowserModule,
@@ -21,16 +20,15 @@ import { SharedModule } from './shared/shared.module';
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
     CoreModule,
-    SharedModule
+    SharedModule,
+    CatalogModule
   ],
   declarations: [
     AppComponent,
-    CatalogComponent,
     RegisterComponent,
     SignInComponent,
   ],
   providers: [
-    CatalogRepositoryService
   ],
   bootstrap:    [ AppComponent ]
 })
