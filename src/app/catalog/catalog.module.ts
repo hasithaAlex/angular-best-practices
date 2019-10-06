@@ -11,4 +11,4 @@ import { SharedModule } from '../shared/shared.module'
     exports: [],
     providers: [ CatalogRepositoryService ]
 })
-export class CatalogModule { };
+export class CatalogModule { }

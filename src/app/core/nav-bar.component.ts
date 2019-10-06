@@ -5,7 +5,7 @@ import { UserRepositoryService } from './user-repository.service';
 @Component({
   selector: 'nav-bar',
   styleUrls: [`./nav-bar.component.css`],
-  template: `./nav-bar.component.html`
+  templateUrl: `./nav-bar.component.html`
 })
 
 export class NavBarComponent  {
